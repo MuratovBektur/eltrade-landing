@@ -1,6 +1,6 @@
 // fonts
-@import "./fonts/Mulller/stylesheet.css";
-@import "./fonts/Roboto/stylesheet.css";
+// @import "./fonts/Mulller/stylesheet.css";
+// @import "./fonts/Roboto/stylesheet.css";
 
 @import "./dropdown.scss";
 body {
@@ -93,9 +93,10 @@ main {
   // overflow: hidden;
 }
 .main {
+  min-height: 100vh;
   margin: 0 auto;
-  position: relative;
-  height: 1200px;
+  //   position: relative;
+  // height: 1200px;
   bottom: 44px;
   &__content {
     // padding-top: 220px;
@@ -127,6 +128,55 @@ main {
     font-weight: 500;
     font-size: 32px;
     line-height: 130%;
+  }
+}
+
+.projects {
+  margin-top: 140px;
+  &__title {
+    text-align: center;
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 44px;
+  }
+  &__content {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__company-title {
+    display: inline-block;
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 36px;
+    padding-right: 15px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #ffc15e;
+  }
+  &__about-app {
+    width: 490px;
+    margin-top: 39px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    padding-bottom: 4px;
+    border-bottom: 4px solid #ffc15e;
+  }
+  &__company-goals {
+    width: 490px;
+    margin-top: 11px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 
@@ -166,10 +216,34 @@ main {
   .responsive-img {
     margin-top: 100px;
     width: 400px;
-    margin-right: 200px;
-    // height: 321px;
-    // width: 349;
-    // height: 321px;
+  }
+  .projects {
+    margin-top: 120px;
+    &__title {
+      font-size: 26px;
+      line-height: 26px;
+    }
+    &__content {
+      margin-top: 40px;
+    }
+    &__company-title {
+      font-size: 30px;
+      line-height: 30px;
+      padding-right: 15px;
+      border-bottom: 2px solid #ffc15e;
+    }
+    &__about-app {
+      width: 340px;
+      margin-top: 20px;
+      font-size: 22px;
+      line-height: 25px;
+    }
+    &__company-goals {
+      width: 340px;
+      margin-top: 11px;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -213,7 +287,7 @@ main {
   }
   .responsive-img {
     margin-top: 100px;
-    width: 400px;
+    width: 300px;
     // margin-right: 200px;
     // height: 321px;
     // width: 349;
@@ -244,7 +318,55 @@ main {
       // text-align: center;
     }
   }
+  .projects {
+    // padding-left: 50px;
+    margin-top: 120px;
+    &__title {
+      // // font-size: 18px;
+      // // line-height: 18px;
+      // letter-spacing: 0.07em;
+    }
+    &__content {
+      // margin-top: 40px;
+      flex-direction: column;
+    }
+    &__content > div {
+      padding-left: 50px;
+    }
+    &__company-title {
+      margin-top: 10px;
+      text-align: center;
+      width: initial;
+      // font-size: 16px;
+      // line-height: 16px;
+      // padding-right: 10px;
+    }
+    &__about-app {
+      width: initial;
+      margin-top: 15px;
+      // font-size: 12px;
+      // line-height: 14px;
+    }
+    &__company-goals {
+      width: initial;
+      margin-top: 11px;
+      // font-size: 10px;
+      // line-height: 12px;
+    }
+    & .responsive-img {
+      width: 300px;
+    }
+  }
+
   .responsive-img {
     margin: 0 auto;
   }
 }
+
+// @media screen and (max-width: 800px) {
+//   .projects {
+//     & .responsive-img {
+//       width: 150px;
+//     }
+//   }
+// }

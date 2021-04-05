@@ -16,16 +16,16 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #222631;
+  background-color: #f1f1f1;
   min-width: 160px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: white;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -33,7 +33,7 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #222631;
+  background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
@@ -42,11 +42,6 @@
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  /* background-color: #3e8e41; */
-  /* border: 1px solid #ffc15e; */
-}
-
 body {
   background-color: #222631;
   font-family: "Roboto";
@@ -56,7 +51,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   color: white;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -87,14 +82,14 @@ body {
 
 .justify-content-between {
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header {
   padding: 17px 100px 17px 98px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 5px;
   z-index: 2;
   background-color: #222631;
@@ -110,8 +105,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header .burger-menu {
@@ -130,9 +125,8 @@ body {
 }
 
 .main {
+  min-height: 100vh;
   margin: 0 auto;
-  position: relative;
-  height: 1200px;
   bottom: 44px;
 }
 
@@ -141,11 +135,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main__lines {
@@ -172,6 +166,66 @@ body {
   font-weight: 500;
   font-size: 32px;
   line-height: 130%;
+}
+
+.projects {
+  margin-top: 140px;
+}
+
+.projects__title {
+  text-align: center;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.projects__content {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects__company-title {
+  display: inline-block;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  padding-right: 15px;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #ffc15e;
+}
+
+.projects__about-app {
+  width: 490px;
+  margin-top: 39px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #ffc15e;
+}
+
+.projects__company-goals {
+  width: 490px;
+  margin-top: 11px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .container {
@@ -205,7 +259,34 @@ body {
   .responsive-img {
     margin-top: 100px;
     width: 400px;
-    margin-right: 200px;
+  }
+  .projects {
+    margin-top: 120px;
+  }
+  .projects__title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .projects__content {
+    margin-top: 40px;
+  }
+  .projects__company-title {
+    font-size: 30px;
+    line-height: 30px;
+    padding-right: 15px;
+    border-bottom: 2px solid #ffc15e;
+  }
+  .projects__about-app {
+    width: 340px;
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .projects__company-goals {
+    width: 340px;
+    margin-top: 11px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -213,8 +294,8 @@ body {
   .header__menu {
     -webkit-box-orient: initial;
     -webkit-box-direction: initial;
-    -ms-flex-direction: initial;
-    flex-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
   }
   .header__menu-item {
     font-size: 16px;
@@ -226,8 +307,8 @@ body {
   }
   .main__content {
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .main__title {
     font-family: Muller;
@@ -248,7 +329,7 @@ body {
   }
   .responsive-img {
     margin-top: 100px;
-    width: 400px;
+    width: 300px;
   }
 }
 
@@ -266,11 +347,39 @@ body {
     padding-top: 200px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main__subtitle {
     width: initial;
+  }
+  .projects {
+    margin-top: 120px;
+  }
+  .projects__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects__content > div {
+    padding-left: 50px;
+  }
+  .projects__company-title {
+    margin-top: 10px;
+    text-align: center;
+    width: initial;
+  }
+  .projects__about-app {
+    width: initial;
+    margin-top: 15px;
+  }
+  .projects__company-goals {
+    width: initial;
+    margin-top: 11px;
+  }
+  .projects .responsive-img {
+    width: 300px;
   }
   .responsive-img {
     margin: 0 auto;

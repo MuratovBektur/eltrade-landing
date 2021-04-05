@@ -1,71 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style/index.css">
-</head>
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
 
-<body>
-
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="header__menu">
+      <div class="container">
+        <div class="header__menu">
+          <a href="#" class="header__menu-item"> Главная </a>
 
-                <a href="#" class="header__menu-item">
-                    Главная
-                </a>
+          <div>
+            <a href="#" class="header__menu-item"> Новости </a>
 
-                <div>
-                    <a href="#" class="header__menu-item">
-                        Новости
-                    </a>
-
-                    <a href="#" class="header__menu-item">
-                        О нас
-                    </a>
-                    <a href="#" class="header__menu-item">
-                        Контакты
-                    </a>
-                </div>
-            </div>
+            <a href="#projects" class="header__menu-item"> О нас </a>
+            <a href="#" class="header__menu-item"> Контакты </a>
+          </div>
         </div>
-        <div class="burger-menu">
-           
-            <div class="dropdown">
-                <button class="dropbtn"> <img src="./assets/img/burger-menu.svg" alt=""></button>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>
+      </div>
+      <div class="burger-menu">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="./assets/img/burger-menu.svg" alt="" />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Главная</a>
+            <a href="#">Новости</a>
+            <a href="#projects">О нас</a>
+          </div>
         </div>
+      </div>
     </header>
     <div class="container">
-        <main>
-            <section id="main" class="main">
-                <img class="main__lines" src="./assets/img/lines-descktop.png" alt="">
-                <div class="main__content ">
-                    <div>
-                        <div class="main__title ">
-                            Eltrade Group
-                        </div>
-                        <div class="main__subtitle ">
-                            “Если вашего бизнеса нет в интернете
-                            то Вас нет в бизнесе” Билл Гейтс
-                        </div>
-                    </div>
-                        <img class="responsive-img" src="./assets/img/crying-man.png" alt="crying-man">
-                </div>
-            </section>
-          
-        </main>
+      <main>
+        <section id="main" class="main">
+          <!-- <img
+            class="main__lines"
+            src="./assets/img/lines-descktop.png"
+            alt=""
+          /> -->
+          <div class="main__content">
+            <div>
+              <div class="main__title">Eltrade Group</div>
+              <div class="main__subtitle">
+                “Если вашего бизнеса нет в интернете то Вас нет в бизнесе” Билл
+                Гейтс
+              </div>
+            </div>
+            <img
+              class="responsive-img"
+              src="./assets/img/crying-man.png"
+              alt="crying-man"
+            />
+          </div>
+        </section>
+        <section id="projects" class="projects">
+          <h2 class="projects__title">Наши проекты</h2>
+          <div class="projects__content">
+            <img
+              class="responsive-img"
+              src="./assets/img/phones.png"
+              alt="phones"
+            />
+            <div>
+              <div class="projects__company-title">Elsource</div>
+              <div class="projects__about-app">
+                Наше приложение предоставляет упрощённый процесс для
+                осуществления купли-продажи
+                <br />
+                товаров и услуг.
+              </div>
+              <div class="projects__company-goals">
+                Наша роль состоит в добавлении продукту или услуге своего
+                клиента ощутимой ценности. Ценность, которую потребитель
+                внутренне либо иным субъективным образом связывает с товарной
+                маркой или услугой.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-   
-</body>
-
+  </body>
 </html>
