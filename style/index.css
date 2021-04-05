@@ -1,25 +1,121 @@
+.dropbtn {
+  background-color: #222631;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222631;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #222631;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+  /* border: 1px solid #ffc15e; */
+}
+
 body {
   background-color: #222631;
   font-family: "Roboto";
 }
 
-* {
+*:not(input) {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: white;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in Internet Explorer 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .important-text {
   color: linear-gradient(90deg, #ffc15e 0%, #ffd593 97.92%);
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .header {
-  padding: 17px 200px 17px 98px;
+  padding: 17px 100px 17px 98px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 5px;
+  z-index: 2;
+  background-color: #222631;
+  position: fixed;
+  /* height: 40px; */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header .burger-menu {
+  display: none;
 }
 
 .header__menu-item {
@@ -33,20 +129,23 @@ body {
   text-decoration: none;
 }
 
-.header__menu-item:first-child {
-  margin-right: 308px;
-}
-
-main {
-  overflow: hidden;
-}
-
 .main {
-  width: 1350px;
   margin: 0 auto;
   position: relative;
   height: 1200px;
   bottom: 44px;
+}
+
+.main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .main__lines {
@@ -57,15 +156,124 @@ main {
 }
 
 .main__title {
-  padding-top: 220px;
+  margin-left: 50px;
   font-weight: 800;
   font-size: 66px;
   line-height: 66px;
   color: #ffc15e;
 }
 
+.main__subtitle {
+  width: 600px;
+  margin-left: 50px;
+  margin-top: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 130%;
+}
+
 .container {
-  max-width: 1146px;
+  max-width: 1546px;
+  width: 90%;
   margin: 0 auto;
+}
+
+.responsive-img {
+  margin-top: 100px;
+  width: 600px;
+}
+
+@media screen and (max-width: 1332px) {
+  .main__title {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+    color: #ffc15e;
+  }
+  .main__subtitle {
+    margin-left: 50px;
+    margin-top: 28px;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 130%;
+  }
+  .responsive-img {
+    margin-top: 100px;
+    width: 400px;
+    margin-right: 200px;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .header__menu {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -ms-flex-direction: initial;
+    flex-direction: initial;
+  }
+  .header__menu-item {
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 32px;
+  }
+  .header__menu-item:last-child {
+    margin-right: 0;
+  }
+  .main__content {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .main__title {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+    color: #ffc15e;
+  }
+  .main__subtitle {
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 28px;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 130%;
+  }
+  .responsive-img {
+    margin-top: 100px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding-left: 50px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header .burger-menu {
+    display: block;
+  }
+  .main__content {
+    padding-top: 200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .main__subtitle {
+    width: initial;
+  }
+  .responsive-img {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=index.css.map */

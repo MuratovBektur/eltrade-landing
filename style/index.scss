@@ -1,31 +1,75 @@
 // fonts
-// @import "./fonts/Mulller/stylesheet.css";
-// @import "./fonts/Roboto/stylesheet.css";
+@import "./fonts/Mulller/stylesheet.css";
+@import "./fonts/Roboto/stylesheet.css";
 
+@import "./dropdown.scss";
 body {
   background-color: #222631;
   font-family: "Roboto";
 }
 
-* {
+*:not(input) {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in Internet Explorer 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .important-text {
   color: linear-gradient(90deg, #ffc15e 0%, #ffd593 97.92%);
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
 .header {
-  padding: 17px 200px 17px 98px;
+  padding: 17px 100px 17px 98px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 5px;
+  z-index: 2;
+  background-color: #222631;
+  position: fixed;
+  /* height: 40px; */
+  top: 0;
+  left: 0;
+  right: 0;
 
-  //   &__menu {
-  //     display: flex;
-  //   }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .burger-menu {
+    display: none;
+  }
+  // &__menu >div{
+  //   display: flex;
+  //   justify-content: space-between;
+
+  // }
 
   &__menu-item {
     // background: -webkit-linear-gradient(90deg, #ffc15e 0%, #ffd593 100%);
@@ -41,20 +85,24 @@ body {
     color: #ffc15e;
     text-decoration: none;
   }
-  &__menu-item:first-child {
-    margin-right: 308px;
-  }
+  // &__menu-item:first-child {
+  //   margin-right: 308px;
+  // }
 }
 main {
-  overflow: hidden;
+  // overflow: hidden;
 }
 .main {
-  width: 1350px;
   margin: 0 auto;
   position: relative;
   height: 1200px;
   bottom: 44px;
-
+  &__content {
+    // padding-top: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__lines {
     z-index: -1;
     right: 192px;
@@ -63,15 +111,140 @@ main {
     position: absolute;
   }
   &__title {
-    padding-top: 220px;
+    margin-left: 50px;
+
     font-weight: 800;
     font-size: 66px;
     line-height: 66px;
     color: #ffc15e;
   }
+  &__subtitle {
+    width: 600px;
+    margin-left: 50px;
+    margin-top: 28px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 130%;
+  }
 }
 
 .container {
-  max-width: 1146px;
+  max-width: 1546px;
+  width: 90%;
   margin: 0 auto;
+}
+.responsive-img {
+  margin-top: 100px;
+  width: 600px;
+}
+
+@media screen and (max-width: 1332px) {
+  .main {
+    &__content {
+      // justify-content: flex-start;
+    }
+    &__title {
+      font-family: Muller;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 32px;
+      color: #ffc15e;
+    }
+    &__subtitle {
+      // width: 400px;
+      margin-left: 50px;
+      margin-top: 28px;
+      font-family: "Roboto";
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 130%;
+    }
+  }
+  .responsive-img {
+    margin-top: 100px;
+    width: 400px;
+    margin-right: 200px;
+    // height: 321px;
+    // width: 349;
+    // height: 321px;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .header {
+    &__menu {
+      flex-direction: initial;
+    }
+    &__menu-item {
+      font-size: 16px;
+      line-height: 16px;
+      margin-right: 32px;
+    }
+    &__menu-item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .main {
+    &__content {
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-family: Muller;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 32px;
+      color: #ffc15e;
+    }
+    &__subtitle {
+      width: 300px;
+      margin-left: 50px;
+      margin-top: 28px;
+      font-family: "Roboto";
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 130%;
+    }
+  }
+  .responsive-img {
+    margin-top: 100px;
+    width: 400px;
+    // margin-right: 200px;
+    // height: 321px;
+    // width: 349;
+    // height: 321px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding-left: 50px;
+    &__menu {
+      display: none;
+    }
+    & .burger-menu {
+      display: block;
+    }
+  }
+  .main {
+    &__content {
+      padding-top: 200px;
+      flex-direction: column;
+    }
+    &__title {
+      // text-align: center;
+    }
+    &__subtitle {
+      width: initial;
+      // text-align: center;
+    }
+  }
+  .responsive-img {
+    margin: 0 auto;
+  }
 }

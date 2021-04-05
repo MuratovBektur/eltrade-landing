@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,64 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style/index.css">
 </head>
+
 <body>
-  
-        <header class="header">
-            <div class="container">
+
+    <header class="header">
+        <div class="container">
             <div class="header__menu">
-                <a href="#" class="header__menu-item"> 
+
+                <a href="#" class="header__menu-item">
                     Главная
                 </a>
-                <a href="#" class="header__menu-item"> 
-                    Новости
-                </a>
-               
-                <a href="#" class="header__menu-item"> 
-                    О нас
-                </a>
-               
-                <a href="#" class="header__menu-item"> 
-                    Контакты
-                </a>
+
+                <div>
+                    <a href="#" class="header__menu-item">
+                        Новости
+                    </a>
+
+                    <a href="#" class="header__menu-item">
+                        О нас
+                    </a>
+                    <a href="#" class="header__menu-item">
+                        Контакты
+                    </a>
+                </div>
             </div>
-           </div>
-        </header>
+        </div>
+        <div class="burger-menu">
+           
+            <div class="dropdown">
+                <button class="dropbtn"> <img src="./assets/img/burger-menu.svg" alt=""></button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+        </div>
+    </header>
+    <div class="container">
         <main>
             <section id="main" class="main">
                 <img class="main__lines" src="./assets/img/lines-descktop.png" alt="">
-               <div>
-                   <div class="main__title">
-                    Eltrade Group
-                   </div>
-               </div>
+                <div class="main__content ">
+                    <div>
+                        <div class="main__title ">
+                            Eltrade Group
+                        </div>
+                        <div class="main__subtitle ">
+                            “Если вашего бизнеса нет в интернете
+                            то Вас нет в бизнесе” Билл Гейтс
+                        </div>
+                    </div>
+                        <img class="responsive-img" src="./assets/img/crying-man.png" alt="crying-man">
+                </div>
             </section>
+          
         </main>
+    </div>
+   
 </body>
+
 </html>
