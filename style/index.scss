@@ -49,15 +49,29 @@ main {
   overflow: hidden;
 }
 .main {
+  width: 1350px;
+  margin: 0 auto;
   position: relative;
   height: 1200px;
   bottom: 44px;
+
   &__lines {
+    z-index: -1;
+    right: 192px;
+
+    display: block;
     position: absolute;
+  }
+  &__title {
+    padding-top: 220px;
+    font-weight: 800;
+    font-size: 66px;
+    line-height: 66px;
+    color: #ffc15e;
   }
 }
 
 .container {
-  width: 1146px;
+  max-width: 1146px;
   margin: 0 auto;
 }

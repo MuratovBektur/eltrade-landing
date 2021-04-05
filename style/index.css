@@ -42,17 +42,30 @@ main {
 }
 
 .main {
+  width: 1350px;
+  margin: 0 auto;
   position: relative;
   height: 1200px;
   bottom: 44px;
 }
 
 .main__lines {
+  z-index: -1;
+  right: 192px;
+  display: block;
   position: absolute;
 }
 
+.main__title {
+  padding-top: 220px;
+  font-weight: 800;
+  font-size: 66px;
+  line-height: 66px;
+  color: #ffc15e;
+}
+
 .container {
-  width: 1146px;
+  max-width: 1146px;
   margin: 0 auto;
 }
 /*# sourceMappingURL=index.css.map */
